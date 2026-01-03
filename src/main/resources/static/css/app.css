@@ -1,0 +1,117 @@
+:root {
+    --bg: #0b1220;
+    --card: rgba(255, 255, 255, 0.06);
+    --text: #e7eefc;
+    --muted: rgba(231, 238, 252, 0.7);
+    --border: rgba(231, 238, 252, 0.12);
+    --accent: #7c5cff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background: radial-gradient(1200px 600px at 20% 0%, rgba(124, 92, 255, 0.25), transparent 60%),
+                radial-gradient(900px 500px at 90% 30%, rgba(27, 210, 150, 0.18), transparent 55%),
+                var(--bg);
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+    width: min(1100px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(11, 18, 32, 0.55);
+    border-bottom: 1px solid var(--border);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.nav {
+    display: flex;
+    gap: 14px;
+}
+
+.nav__link {
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.nav__link:hover {
+    border-color: var(--border);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.hero {
+    margin: 32px 0;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.04));
+}
+
+.hero h1 {
+    margin: 0 0 10px;
+    font-size: 34px;
+    line-height: 1.15;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.btn:hover {
+    border-color: rgba(124, 92, 255, 0.55);
+    box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.18);
+}
+
+.footer {
+    margin-top: 36px;
+    border-top: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+}
